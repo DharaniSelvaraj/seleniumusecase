@@ -1,0 +1,224 @@
+Case study 1: //Registration
+1. The user should go to "https://www.amazon.in"
+2. The user should click Start here. link.
+	1. Identify the Start here. link 	
+	2. Click the Start here. link
+3. The user should fill required details
+	1. Identify the your name text box	id="ap_customer_name"
+<input type="text" maxlength="50" id="ap_customer_name" autocomplete="off" name="customerName" tabindex="1" class="a-input-text a-span12 auth-autofocus auth-required-field" xpath="1">
+	2. Type the input as "Aaaaa"
+	3. Identify the Mobile number text box		id="ap_phone_number"
+<input type="tel" maxlength="50" id="ap_phone_number" placeholder="Mobile number" name="email" tabindex="3" class="a-input-text a-span12 a-spacing-micro auth-required-field auth-require-phone-validation" data-validation-id="phoneNumber" xpath="1">
+	4. Type the input as "1234567898"
+	5. Identify the Email text box 		id="ap_email"
+<input type="email" maxlength="64" id="ap_email" name="secondaryLoginClaim" tabindex="4" class="a-input-text a-span12 auth-require-email-validaton" data-validation-id="email" style="" xpath="1">
+	6. Type the input as "aaa@gmail.com"
+	7. Identify the password text box	id="ap_password"
+<input type="password" maxlength="1024" id="ap_password" autocomplete="off" placeholder="At least 6 characters" name="password" tabindex="5" class="a-input-text a-span12 auth-required-field auth-require-fields-match auth-require-password-validation" xpath="1">
+	8. Type the input as "Aaa@01"
+4. The user should click the continue button
+	1. Identify the continue button   id="continue"
+<input id="continue" tabindex="8" class="a-button-input" type="submit" aria-labelledby="auth-continue-announce" style="" xpath="1">
+	2. Click the continue button
+
+
+
+Case Study 2: // Example for Radio Button & Check Boxes.
+1. The user should go to "http://destinationqa.com/radiobuttons-html/"
+2. The user should select Monday Radio Button
+	1. Identify the Monday radio button. 	name="groupName"
+<input name="groupName" type="radio" value="Mon">
+	2. Select Monday radio button.
+3. The user should check Yellow & Orange check box
+	1. Identify the Yellow and Orange check box 	name="orange"  name="yellow"
+<input name="orange" type="checkbox">
+<input checked="checked" name="yellow" type="checkbox">
+	2. Check Yellow & Orange check box
+
+
+
+Case Study 3: // Example for Navigate()
+1. The user should go to "https://www.rediff.com"
+2. The user should get & print the title of the home page
+3. The user should click on Sign in link
+	1. Identify the Sign in link
+	2. Click on the Sign in link
+<a href="https://mail.rediff.com/cgi-bin/login.cgi" title="Already a user? Sign in" class="signin" xpath="1" style="">Sign in</a>
+4. The user should get & print the title of the Login page
+5. The user should go back to the previous page using navige method
+6. The user should get the title & check if it same as home page
+7. The user should use forward method & get the page title & check if it same as Login page
+8. The user should close all the browser entities.
+
+
+
+Case Study 4: // Example for getAttribute()
+1. The user should go to ebay.in "https://in.ebay.com"
+2. Get all the attribute values of the register link as per the HTML design.
+<a href="https://reg.ebay.com/reg/PartialReg?ru=https%3A%2F%2Fin.ebay.com%2F" _sp="m570.l2621" xpath="1">register</a>	
+
+
+
+case study: 5	// getTitle() and Explicit wait based on the Title
+1. The user should go to "https://www.google.com"
+2. The user should search for Automation Testing
+	1. Identify the search text box  	//input[@name='q']
+<input class="gLFyf gsfi" maxlength="2048" name="q" type="text" jsaction="paste:puy29d" aria-autocomplete="both" aria-haspopup="false" autocapitalize="off" autocomplete="off" autocorrect="off" role="combobox" spellcheck="false" title="Search" value="" aria-label="Search" data-ved="0ahUKEwjOreON___kAhUT4o8KHVYxAeYQ39UDCAQ" xpath="1">
+	2. Type the input as "Automation Testing" 
+3. The user should click on Google Search button	
+	1. Identify the Google Search button		//div[@class='VlcLAe']//input[@name='btnK']
+<input class="gNO89b" value="Google Search" aria-label="Google Search" name="btnK" type="submit" data-ved="0ahUKEwjOreON___kAhUT4o8KHVYxAeYQ4dUDCAY" xpath="1" style="">
+	2. Click the Google Search button
+4. Explicitwait based on titlecontains
+5. Get the title should be same as search term
+
+
+
+Case Study 6:// Example for FindElements
+1. The user should be on Amazon.in  "https://www.amazon.in/"
+
+2. The user should search for the "Da Vinci Books"   
+	1. Identify the select box
+       xpath= //select[@id='searchDropdownBox']
+	2. Select the value called 'Books'
+
+  	3. Identify the Search text box
+        id="twotabsearchtextbox"
+    
+	4. Type the string input "Da Vinci Code' Books
+
+3. The user should click search button
+	1. Identify the button with magnifier symbol
+        //input[@tabindex = '10']
+
+ 	2. The button should be clicked  
+4. Wait till the collection of books are loaded till the last item(Explicit wait to check the last item of  page is loaded)  
+
+5. Get the Title & price of all the books & print in the console  
+	1. Identify the common property for title that all the elements are sharing  		xpath="//span[@class = 'a-size-medium a-color-base a-text-normal']"
+	2. Identify the common property for price of the book that all the elements are sharing 	class="a-price-whole"
+	3. Get the text and print
+
+
+
+Case Study 7: // Working with Select /List object
+1. The user should go to "http://newtours.demoaut.com/"
+2. The user should enter the Login Credential of username and password as "mercury"
+	1. Identify the username text box		name="userName"
+	2. Type the input as "mercury"
+	3. Identify the password text box		name="password"
+	4. Type the input as "mercury"
+3. The user should click on Signin Button
+	1. Identify the Signin Button		name="login"
+	2. Click the Signin Button
+4. The user should select the passengers count as "4" using select object by index
+	1. Identify the passengers select box		name="passCount"
+	2. Select the passengers count as "4" using select object by index	index=3
+5. The user should select Departure location, Month & Date using select by Value
+	1. Identify the Departing from select box	 name="fromPort"
+	2. Select the Departing from as "London" using select by value 		value="London"
+	3. Identify the On select box to choose month and date
+		1. Identify the month select box	name="fromMonth"
+		2. Select the month as "May" using select by value	value="5"
+		3. Identify the date select box		name="fromDay"
+		4. Select the date as "10" using select by value	value="10"
+6. The user should select Arrival location, Month,& Date  using select by Visible Text
+	1. Identify the Arrival In select box		name="toPort"
+	2. Select the Arrival In as "Paris" using select by Visible Text	text="Paris"
+	3. Identify the Returning select box to choose month and date
+		1. Identify the month select box	name="toMonth"
+		2. Select the month as "May" using select by Visible Text	text="May"
+		3. Identify the date select box		name="toDay"
+		4. Select the date as "14" using select by Visible Text		text="14"
+7. The user should click on Continue booking the flight ticket
+	1. Identify the CONTINUE button		name="findFlights"
+	2. Click on the CONTINUE button
+
+
+
+Case Study 8://verify the default values selected in the Departing from is not same as Arriving In select box
+1. The user should go to "http://newtours.demoaut.com/"
+2. The user should enter the Login Credential of username and password as "mercury"
+	1. Identify the username text box		name="userName"
+	2. Type the input as "mercury"
+	3. Identify the password text box		name="password"
+	4. Type the input as "mercury"
+	5. Identify the Signin Button		name="login"
+	6. Click the Signin Button
+3. The user should verify the default values selected in the Departing from is not same as Arriving In select box
+
+
+
+Case Study 9:Verify the Height & Width
+1. The user should go to "http://newtours.demoaut.com/"
+2. The user should Verify the Height & Width of Username & Password text box is same.
+	1. Identify the username text box		name="userName"
+	2. Identify the password text box		name="password"
+	3. Get height and width of username and password text box and verify
+
+
+case study 10:
+Goto Google search engine
+Search for any term/word
+Capture the data in autosuggest window and print it.
+1. The user should go to "https://www.google.com"
+2. The user should search for any word (Automation Testing)
+	1. Identify the search text box  	//input[@name='q']
+<input class="gLFyf gsfi" maxlength="2048" name="q" type="text" jsaction="paste:puy29d" aria-autocomplete="both" aria-haspopup="false" autocapitalize="off" autocomplete="off" autocorrect="off" role="combobox" spellcheck="false" title="Search" value="" aria-label="Search" data-ved="0ahUKEwjOreON___kAhUT4o8KHVYxAeYQ39UDCAQ" xpath="1">
+	2. Type the input as "Automation Testing"
+3. The user should capture the data in autosuggest window and print it.
+	1. Identify the property for autosuggest window   	xpath="//ul[@class='erkvQe']//li"	
+	2. Store the elements in list and print the list
+
+
+
+Case Study 11:Working With Multiple Window of a Browser
+1. Goto Gmail Create account URL
+2.  Click on Term of Service
+3.  Click on Privacy Policy
+4. After all the windows are opened fetch the title & all the links avialable in each of the window
+1. The user should go to create account url "https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp"
+2. The user should click on Term of Service
+	1. Identify the Term of Service 
+<a href="https://accounts.google.com/TOS?loc=IN&amp;hl=en" target="_blank">Terms</a>
+	2. Click on the Term of Service
+3. The user should click on Privacy Policy
+	1. Identify the Privacy Policy
+<a href="https://accounts.google.com/TOS?loc=IN&amp;hl=en&amp;privacy=true" target="_blank">Privacy</a>
+	2. Click on the Privacy Policy
+4. After all the windows are opened user should fetch the title and all the links available in each of the window
+
+
+
+Case Study 12:Explicit wait
+1. titleContains
+2. titleIs
+3. ExpectedConditions.presenceOfElementLocated(locator)
+
+
+Case Study : 13
+1. The user should go to "http://www.fedex.com/sg/"
+2. The user should verify whther the User ID & Password text box is available or not?
+	1. Identify the Sign Up/Log In link
+	2. Click the Sign Up/Log In link
+<a href="#" class="fxg-link fxg-dropdown-js fxg-keyboard" data-default-signintext="Sign Up/Log In"><span aria-hidden="true" class="fxg-user-options__sign-in-text" tabindex="-1">Sign Up/Log In </span><img class="fxg-user-options__icon" alt="Sign in to Fedex.com" src="https://www.fedex.com/content/dam/fedex-com/common/sprite-placeholder.png"></a>
+	3. Identify the UserId text box		id="NavLoginUserId"
+<input id="NavLoginUserId" tabindex="0" focusable="true" type="text" class="fxg-field__input-text fxg-field__input--required" name="user" required="" title="User ID" aria-required="true" data-errmsg="Sorry, this is a required field." xpath="1">
+	4. Identify the Password text box	 id="NavLoginPassword" 
+<input id="NavLoginPassword" autocomplete="off" tabindex="0" focusable="true" type="password" class="fxg-field__input-text fxg-field__input--required" name="pwd" required="" title="Password" aria-required="true" data-errmsg="Sorry, this is a required field." xpath="1">
+3. The user should get & print the already available default text avaialable User ID & Password Text box & Set new value.
+	1. Identify the UserId text box		id="NavLoginUserId"
+	2. Get the default value of User ID text box
+	3. Type the input as "Aaaaa"
+	4. Identify the Password text box	 id="NavLoginPassword" 
+	5. Get the default value of Password text box
+	6. Type the input as "Aaaaa"
+4. The user should verify the Remember me check box, should be selected by default
+	1. Identify the Remember me check box		id="NavLoginRememberMe"
+<input type="checkbox" aria-label="remember me checkbox" role="checkbox" aria-checked="false" name="rememberme" id="NavLoginRememberMe" class="fxg-field__input-checkbox" value="rememberme">
+	2. Verify whether the Remember me check box is enabled 
+		If it is checked then move to next step else if it is not checked then check the remember me check box should be checked
+5. The user should click on the LOG IN button
+	1. Identify the LOG IN button		//button[@class='fxg-button fxg-button--orange fdx-login_error-label-change']
+<button type="submit" class="fxg-button fxg-button--orange fdx-login_error-label-change" xpath="1">Log In</button>
+	2. Click the LOG IN button 
